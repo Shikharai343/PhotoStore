@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Detail Screen should match snapshot with params 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flex": 1,
+      },
+      Object {
+        "backgroundColor": "white",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "padding": 16,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+          },
+          Object {
+            "marginVertical": 4,
+          },
+        ]
+      }
+    >
+      <Text
+        color="#5B5E66"
+        fontType="small"
+        style={
+          Object {
+            "flex": 1,
+            "marginRight": 6,
+          }
+        }
+        textType="label"
+      >
+        Posted by undefined approximately NaN years ago
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+          }
+        }
+      >
+        <IconComponent
+          color="orange"
+          name="trophy"
+          size={15}
+        />
+        <Text
+          fontType="small"
+          style={
+            Object {
+              "marginHorizontal": 4,
+            }
+          }
+          textType="label"
+        />
+      </View>
+    </View>
+    <Text
+      color="#43474E"
+      fontType="small"
+      style={
+        Object {
+          "marginTop": 6,
+        }
+      }
+      textType="title"
+    />
+  </View>
+  <ImageComponent
+    containerStyle={
+      Object {
+        "flex": 1,
+      }
+    }
+    imageStyle={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <TouchableOpacity
+    activeOpacity={0.5}
+    onPress={[Function]}
+    style={
+      Object {
+        "alignSelf": "flex-end",
+        "backgroundColor": "white",
+        "borderRadius": 25,
+        "bottom": 50,
+        "ight": 50,
+        "padding": 10,
+        "position": "absolute",
+      }
+    }
+  >
+    <IconComponent
+      color="black"
+      name="heart"
+      size={25}
+    />
+  </TouchableOpacity>
+</View>
+`;

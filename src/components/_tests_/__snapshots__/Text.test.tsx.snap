@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text should match snapshot for label 1`] = `
+<Text
+  style={
+    Object {
+      "color": undefined,
+      "fontFamily": "Times New Roman",
+      "fontSize": 10,
+    }
+  }
+>
+  Test
+</Text>
+`;
+
+exports[`Text should match snapshot for regular 1`] = `
+<Text
+  style={
+    Object {
+      "color": undefined,
+      "fontFamily": "Times New Roman",
+      "fontSize": 12,
+    }
+  }
+>
+  Test
+</Text>
+`;
+
+exports[`Text should match snapshot for small 1`] = `
+<Text
+  style={
+    Object {
+      "color": undefined,
+      "fontFamily": "Times New Roman",
+      "fontSize": 10,
+    }
+  }
+>
+  Test
+</Text>
+`;
+
+exports[`Text should match snapshot for title 1`] = `
+<Text
+  style={
+    Object {
+      "color": undefined,
+      "fontFamily": "Times New Roman",
+      "fontSize": 16,
+    }
+  }
+>
+  Test
+</Text>
+`;

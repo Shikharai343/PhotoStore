@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Screen should match snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "flex": 1,
+      "padding": 16,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <TextInput
+      onChangeText={[Function]}
+      placeholder="Filter by title"
+      style={
+        Object {
+          "borderColor": "#797a7a",
+          "borderRadius": 6,
+          "borderWidth": 0.5,
+          "flex": 1,
+          "marginBottom": 20,
+          "marginHorizontal": 16,
+          "padding": 10,
+        }
+      }
+      value=""
+    />
+    <Button
+      onPress={[Function]}
+      title="Search"
+    />
+    <Button
+      onPress={[Function]}
+      title="Clear"
+    />
+  </View>
+  <FlatList
+    data={Array []}
+    keyExtractor={[Function]}
+    numColumns={2}
+    renderItem={[Function]}
+    showsVerticalScrollIndicator={false}
+  />
+</View>
+`;
