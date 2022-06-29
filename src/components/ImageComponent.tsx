@@ -13,7 +13,7 @@ const ImageComponent: FC<IImageProps> = (props) => {
 
     return (
         <View style={containerStyle}>
-            <Image source={{ uri }} style={imageStyle} defaultSource={DEFAULT_IMAGE} />
+            <Image resizeMode="contain" source={{ uri }} style={imageStyle} defaultSource={DEFAULT_IMAGE} />
         </View>
     )
 }

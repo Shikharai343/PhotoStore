@@ -1,10 +1,8 @@
-import axios from "axios";
-
 const url = 'http://www.reddit.com/r/pics/.json?jsonp='
 
 class AppRepository {
     public getPics = async () => {
-        return await axios.get(url);
+        return await fetch(url);
     };
 }
 

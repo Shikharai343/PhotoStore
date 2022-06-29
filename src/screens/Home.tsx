@@ -1,5 +1,5 @@
 import React, { FC, useCallback, useEffect, useState } from 'react'
-import { View, FlatList, TouchableOpacity, StyleSheet, TextInput, Button } from 'react-native'
+import { View, FlatList, TouchableOpacity, StyleSheet, TextInput, Button, Alert } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { AppRepository } from '../network/repositories/AppRepository'
 import { DateUtil } from '../utils/DateUtil'
@@ -18,13 +18,12 @@ const Home: FC = () => {
 
     const getPicData = async () => {
         try {
-            const response = await AppRepository.getPics();
-            const resData = response.data;
-            if (resData.data) {
-                setPicsData(resData.data.children)
+            const response = await (await AppRepository.getPics()).json();
+            if (response.data) {
+                setPicsData(response.data.children)
             }
         } catch (e) {
-            console.log('Error while fetching data', JSON.stringify(e))
+            Alert.alert('Error while fetching data', JSON.stringify(e))
         }
     }
 
@@ -81,12 +80,21 @@ const Home: FC = () => {
         )
     }
 
+    const renderEmptyComponent = () => {
+        return (
+            <View style={styles.emptyView}>
+                <Text textType='title' fontType='regular'>Loading</Text>
+            </View>
+        )
+    }
+
     return (
         <View style={styles.container}>
             <View style={styles.searchContainer}>
                 <TextInput
                     value={searchValue}
                     placeholder='Filter by title'
+                    placeholderTextColor="#717275"
                     onChangeText={setSearchValue}
                     style={styles.input}
                 />
@@ -100,6 +108,7 @@ const Home: FC = () => {
             <FlatList
                 data={picsData}
                 numColumns={2}
+                ListEmptyComponent={renderEmptyComponent}
                 renderItem={renderItem}
                 keyExtractor={renderKeyExtractor}
                 showsVerticalScrollIndicator={false}
@@ -142,5 +151,11 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         borderRadius: 6,
         marginHorizontal: 16,
+        color: 'black'
+    },
+    emptyView: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
     }
 })

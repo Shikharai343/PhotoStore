@@ -54,7 +54,7 @@ const Detail: FC = () => {
                     {title}
                 </Text>
             </View>
-            <ImageComponent uri={url} imageStyle={styles.flexOne} containerStyle={styles.flexOne} />
+            <ImageComponent uri={url} imageStyle={styles.flexOne} containerStyle={[styles.flexOne, {backgroundColor: '#2b3954'}]} />
             <TouchableOpacity activeOpacity={0.5} onPress={onFavourite} style={styles.favContainer}>
                 <IconComponent name={"heart"} size={25} color={isFavourite ? 'red' : 'black'} />
             </TouchableOpacity>
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     favContainer: {
         position: 'absolute',
         bottom: 50,
-        ight: 50,
+        right: 50,
         alignSelf: 'flex-end',
         borderRadius: 25,
         padding: 10,
